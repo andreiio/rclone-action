@@ -1,0 +1,9 @@
+name: 'rclone'
+description: 'rclone wrapper'
+author: 'andreiio'
+runs:
+  using: 'docker'
+  image: 'docker://andreiio/rclone:latest'
+branding:
+  icon: 'package'
+  color: 'red'
