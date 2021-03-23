@@ -1,4 +1,4 @@
-name: 'rclone'
+name: 'rclone-action'
 description: 'rclone wrapper'
 author: 'andreiio'
 runs:
