@@ -20,19 +20,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Release
-      uses: andreiio/rclone-release@v1
+    - uses: andreiio/rclone-action@v1
       with:
-        bucket: "s3:release"
-        publish_dir: ./public
-        release_name: project-name
+        args: copy dist s3:target
       env:
         RCLONE_CONFIG_S3_TYPE: s3
         RCLONE_CONFIG_S3_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
         RCLONE_CONFIG_S3_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
 ```
 
-> See the [rclone documentation on environment variables](https://rclone.org/docs/#environment-variables) for info on remote access configuration.
+> See the [rclone documentation on environment variables](https://rclone.org/docs/#environment-variables) for info on remote access configuration and the [commands overview](https://rclone.org/commands/) for an index of all commands in rclone.
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
