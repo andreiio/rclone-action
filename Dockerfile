@@ -14,7 +14,4 @@ RUN curl -sSOL https://github.com/rclone/rclone/releases/download/${RCLONE_VERSI
     mv rclone-${RCLONE_VERSION}-linux-amd64/rclone /usr/local/bin/rclone && \
     rm -rf rclone-${RCLONE_VERSION}-linux-amd64{,.zip}
 
-COPY entrypoint.sh /usr/local/bin/
-
-ENTRYPOINT ["entrypoint.sh"]
-
+ENTRYPOINT ["rclone"]
